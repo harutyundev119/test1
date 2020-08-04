@@ -1,0 +1,45 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: {{ template "trackableappname" . }}
+spec:
+  replicas: {{ .Values.deployment.replicas }}
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}
+      service: {{ template "trackableappname" . }}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: {{ template "trackableappname" . }}
+        service: {{ template "trackableappname" . }}
+      annotations:
+        git_commit: {{ .Values.git.commit }}
+        app.gitlab.com/env: {{ .Values.git.env | quote }}
+        app.gitlab.com/app: {{ .Values.git.app | quote }}
+    spec:
+      imagePullSecrets:
+      - name: {{ .Values.registry.secret }}
+      containers:
+      - name: {{ .Chart.Name }}
+        image: {{ .Values.registry.image }}
+        imagePullPolicy: Always
+        livenessProbe:
+          tcpSocket:
+            port: {{ .Values.service.internalPort }}
+          initialDelaySeconds: 15
+          periodSeconds: 30
+        readinessProbe:
+          tcpSocket:
+            port: {{ .Values.service.internalPort }}
+          initialDelaySeconds: 15
+          periodSeconds: 30
+        resources:
+          {{- toYaml .Values.resources | nindent 10 }}
+        ports:
+        - containerPort: {{ .Values.service.internalPort }}

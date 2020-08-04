@@ -1,0 +1,28 @@
+@custom-media --xs (min-width: 320px);
+@custom-media --s (min-width: 768px);
+@custom-media --m (min-width: 1024px);
+@custom-media --l (min-width: 1440px);
+@custom-media --xsm (max-width: 767px);
+@custom-media --sm (max-width: 1023px);
+@custom-media --mm (max-width: 1439px);
+
+$f-1: 'HelveticaNeueLT CYR 55 Roman';
+$f-2: 'HelveticaNeueLT CYR 65 Md';
+$f-3: 'HelveticaNeueCyr';
+
+$white: #ffffff;
+$black: #000000;
+
+$dark: #23262c;
+$dark-hover: #2c2f36;
+$yellow: #ffd13b;
+$grey: #6f7b82;
+$grey-bg: #f4f4f4;
+$purple: #857fbc;
+$light: #f4f4f4;
+
+$red: #e4002c;
+$green: #029640;
+
+$ya-baloon-bg: #555e65;
+$disabled: #c6cccf;

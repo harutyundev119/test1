@@ -1,0 +1,131 @@
+.page-headline {
+  font-size: 32px;
+  line-height: 1.12;
+  color: $dark;
+  @media (--l) {
+    font-size: 64px;
+    line-height: 1;
+  }
+  &.m-upp {
+    text-transform: uppercase;
+  }
+  &.m-medium {
+    font-family: $f-2;
+  }
+  &.m-white {
+    color: $white;
+  }
+}
+.page-h1 {
+  font-size: 45px;
+  line-height: 1.12;
+  color: $dark;
+  @media (--l) {
+    font-size: 45px;
+  }
+  &.m-upp {
+    text-transform: uppercase;
+  }
+  &.m-medium {
+    font-family: $f-2;
+  }
+}
+.page-h2 {
+  font-size: 32px;
+  line-height: 1.12;
+  color: $dark;
+  &.m-medium {
+    font-family: $f-2;
+  }
+  &.m-white {
+    color: $white;
+  }
+}
+.page-h3 {
+  font-size: 28px;
+  line-height: 1.2;
+  color: $dark;
+  &.m-upp {
+    text-transform: uppercase;
+  }
+  &.m-medium {
+    font-family: $f-2;
+  }
+}
+.page-h4 {
+  font-size: 22px;
+  line-height: 1.2;
+  color: $dark;
+  &.m-upp {
+    text-transform: uppercase;
+  }
+  &.m-medium {
+    font-family: $f-2;
+  }
+}
+.page-h5 {
+  font-family: $f-2;
+  font-size: 22px;
+  line-height: 1.2;
+  color: $dark;
+  @media (--s) {
+    font-size: 28px;
+  }
+  &.m-white {
+    color: $white;
+  }
+}
+.page-text {
+  font-size: 16px;
+  line-height: 1.2;
+  color: $dark;
+  &.m-grey {
+    color: $grey;
+  }
+  &.m-white {
+    color: $white;
+  }
+  &.m-upp {
+    text-transform: uppercase;
+  }
+  &.m-medium {
+    font-family: $f-2;
+  }
+  &.m-fs12 {
+    font-size: 12px;
+  }
+  &.m-lh {
+    line-height: 1.5;
+    p:not(:last-child) {
+      margin-bottom: 16px;
+      @media(--m) {
+        margin-bottom: 32px;
+      }
+
+    }
+  }
+  &.m-line{
+    text-decoration: line-through;
+  }
+}
+.page-list {
+  li {
+    font-size: 14px;
+    line-height: 17px;
+    color: $dark;
+    position: relative;
+    padding-left: 24px;
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+    &:after {
+      position: absolute;
+      content: '';
+      top: 4px;
+      left: 0;
+      width: 16px;
+      height: 1px;
+      background-color: $dark;
+    }
+  }
+}

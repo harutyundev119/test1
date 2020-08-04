@@ -1,0 +1,456 @@
+ {
+  .svg-arrow-empty-down {
+    width: 1.43em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-arrow-empty-right {
+    width: 0.57em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-arrow-empty-up {
+    width: 1.43em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-arrow-left {
+    width: 1.91em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-arrow-right {
+    width: 1.91em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-arrow-xs-left {
+    width: 1.17em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-arrow-xs-right {
+    width: 1.15em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-arrow {
+    width: 1.08em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-calendar {
+    width: 1.06em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-close {
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-copy {
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-eye {
+    width: 1.5em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-mail {
+    width: 1.27em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-mappoint {
+    width: 0.79em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-minus {
+    width: 9em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-phone {
+    width: 0.87em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-plus {
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-remove {
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-search {
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-warning {
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-menu {
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-yt {
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-vk {
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-ok {
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-fb {
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-inst {
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-mark-1 {
+    width: 2.56em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-mark-10 {
+    width: 5.42em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-mark-11 {
+    width: 4.75em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-mark-2 {
+    width: 3.13em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-mark-3 {
+    width: 3.6em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-mark-4 {
+    width: 4.6em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-mark-5 {
+    width: 2.06em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-mark-6 {
+    width: 2em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-mark-7 {
+    width: 1.35em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-mark-8 {
+    width: 7.3em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-mark-9 {
+    width: 8.1em;
+    height: 1em;
+    fill: #000000;
+  }
+  /*.svg-category-1 {
+    width: 0.78em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-category-2 {
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-category-3 {
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-category-4 {
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-category-5 {
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-category-6 {
+    width: 1.14em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-category-7 {
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-category-8 {
+    width: 0.7em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-category-9 {
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-category-10 {
+    width: 0.74em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-category-11 {
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-category-12 {
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-category-13 {
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-category-14 {
+    width: 0.89em;
+    height: 1em;
+    fill: #000000;
+  }*/
+  .svg-category-1 {
+    /*1*/
+    width: 0.78em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-category-2 {
+    /*2*/
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-category-5 {
+    /*3*/
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-category-11 {
+    /*4*/
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-category-3 {
+    /*5*/
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-category-13 {
+    /*6*/
+    width: 1.14em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-category-6 {
+    /*7*/
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-category-9 {
+    /*8*/
+    width: 0.7em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-category-4 {
+    /*9*/
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-category-12 {
+    /*10*/
+    width: 0.74em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-category-8 {
+    /*11*/
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-category-7 {
+    /*12*/
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-category-14 {
+    /*13*/
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-category-10 {
+    /*14*/
+    width: 0.89em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-delete {
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-download {
+    width: 0.92em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-play {
+    width: 0.7em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-tw-xs {
+    width: 1.17em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-vk-xs {
+    width: 2em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-yt-xs {
+    width: 1.33em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-fb-xs {
+    width: 1em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-brand-belaz {
+    width: 10.2em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-brand-chevrolet {
+    width: 3.13em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-brand-daewoo {
+    width: 1.35em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-brand-gaz {
+    width: 4.8em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-brand-hyundai {
+    width: 2.06em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-brand-kia {
+    width: 2em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-brand-kraz {
+    width: 5.6em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-brand-lada {
+    width: 2.56em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-brand-maz {
+    width: 5.5em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-brand-moaz {
+    width: 2.79em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-brand-opel {
+    width: 1.31em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-brand-paz {
+    width: 8.4em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-brand-renault {
+    width: 0.79em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-brand-uaz {
+    width: 3.6em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-brand-ural {
+    width: 7.2em;
+    height: 1em;
+    fill: #000000;
+  }
+  .svg-brand-datsun {
+    width: 4.1em;
+    height: 1em;
+    fill: #000000;
+  }
+}

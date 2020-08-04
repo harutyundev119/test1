@@ -1,0 +1,22 @@
+ingress:
+  baseDomain:
+  domains:
+
+service:
+  type: ClusterIP
+  externalPort: 80
+  internalPort: 80
+
+application:
+  track: stable
+
+deployment:
+  replicas: 1
+
+resources:
+  limits:
+    cpu: 150m
+    memory: 128Mi
+  requests:
+    cpu: 10m
+    memory: 20Mi

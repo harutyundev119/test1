@@ -1,0 +1,218 @@
+body {
+  font-family: $f-1, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+.m-mb12 {
+  margin-bottom: 12px;
+}
+.m-mb32 {
+  margin-bottom: 32px;
+}
+.m-ml16 {
+  margin-left: 16px;
+}
+.m-ws-none {
+  white-space: nowrap;
+}
+
+.scrollContainer {
+  overflow-y: scroll;
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar {
+    width: 3px;
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $dark;
+  }
+  &.m-white {
+    &::-webkit-scrollbar-thumb {
+      background-color: $white;
+    }
+  }
+  &.m-color-18191B {
+    &::-webkit-scrollbar-thumb {
+      background-color: $white;
+    }
+  }
+}
+
+body {
+  &.m-dark {
+    background-color: $dark;
+  }
+  &.m-light {
+    background-color: #f4f4f4;
+  }
+  &.m-color-1C2128 {
+    background-color: #1c2128;
+  }
+  &.m-color-18191B {
+    background-color: #18191b;
+  }
+}
+.page {
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  &.m-dark {
+    background-color: $dark;
+  }
+  &.m-light {
+    background-color: #f4f4f4;
+  }
+  &.m-color-1C2128 {
+    background-color: #1c2128;
+  }
+  &.m-color-18191B {
+    background-color: #18191b;
+  }
+  &.m-contact {
+    @media (--s) {
+      background-image: url('~assets/images/contact/map.png');
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-size: 419.2px 444.8px;
+    }
+    @media (--m) {
+      background-size: 698.7px 741.3px;
+    }
+  }
+}
+.page-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  &.m-fixed{
+    position: fixed;
+    left: 0;
+    right: 0;
+  }
+}
+.page-footer {
+  margin-top: auto;
+  &.m-hidden-s {
+    @media (--s) {
+      display: none;
+    }
+  }
+}
+.page-main {
+  &:not(.m-full) {
+    padding: 40px 0 80px;
+    @media (--s) {
+      padding: 80px 0 130px;
+    }
+  }
+  &.m-bottom {
+    padding-top: 40px;
+    padding-bottom: 0;
+    @media (--s) {
+      padding-top: 80px;
+      padding-bottom: 0;
+    }
+  }
+  &.m-padding-null {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+.page-top {
+  margin-bottom: 40px;
+  @media (--m) {
+    margin-bottom: 64px;
+  }
+}
+.page-bread {
+  margin-bottom: 8px;
+}
+.page-search-live {
+  display: flex;
+  @media (--xsm) {
+    margin-top: 40px;
+    justify-content: space-between;
+    position: relative;
+  }
+}
+.page-line {
+  display: flex;
+  @media (--s) {
+    position: relative;
+  }
+
+  @media (--xsm) {
+    flex-direction: column;
+  }
+  @media (--s) {
+    align-items: center;
+    justify-content: space-between;
+  }
+  &.m-right {
+    justify-content: flex-end;
+  }
+}
+.m-gradient {
+  background: radial-gradient(
+      72.08% 31.54% at 4.42% 80.91%,
+      rgba(0, 190, 214, 0.07) 0%,
+      rgba(24, 25, 27, 0) 100%
+    ),
+    radial-gradient(
+      95.7% 28.57% at 92.07% 98.48%,
+      rgba(0, 190, 214, 0.12) 0%,
+      rgba(24, 25, 27, 0) 100%
+    );
+}
+
+.svg-brand-belaz {
+  font-size: 10px;
+}
+.svg-brand-chevrolet {
+  font-size: 16px;
+}
+.svg-brand-daewoo {
+  font-size: 20px;
+}
+.svg-brand-gaz {
+  font-size: 10px;
+}
+.svg-brand-hyundai {
+  font-size: 18px;
+}
+.svg-brand-kia {
+  font-size: 18px;
+}
+.svg-brand-kraz {
+  font-size: 10px;
+}
+.svg-brand-lada {
+  font-size: 16px;
+}
+.svg-brand-maz {
+  font-size: 10px;
+}
+.svg-brand-moaz {
+  font-size: 10px;
+}
+.svg-brand-opel {
+  font-size: 18px;
+}
+.svg-brand-paz {
+  font-size: 9px;
+}
+.svg-brand-renault {
+  font-size: 18px;
+}
+.svg-brand-uaz {
+  font-size: 10px;
+}
+.svg-brand-ural {
+  font-size: 10px;
+}
+.svg-brand-datsun {
+  font-size: 12px;
+}

@@ -1,0 +1,18 @@
+@define-mixin ac {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@define-mixin acx {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@define-mixin acy {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}

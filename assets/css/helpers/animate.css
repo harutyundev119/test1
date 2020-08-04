@@ -1,0 +1,630 @@
+$animate-duration: 1000ms;
+$animate-duration-xs: 300ms;
+$animate-delay: 0ms;
+
+/*** animate default ***/
+
+/*.page-enter-active,
+.page-leave-active {
+  transition-duration: $animate-duration;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition-property: opacity, transform;
+    transition-timing-function: ease-out;
+    background-color: $white;
+    transform: translateY(-100%);
+  }
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition-property: opacity, transform;
+    transition-timing-function: ease-in;
+    background-color: $dark;
+    opacity: 1;
+  }
+}
+
+.page-leave {
+  &::after {
+    transform: translateY(-100%);
+  }
+}
+
+.page-leave-active {
+  &::after {
+    transition-duration: $animate-duration;
+    transition-delay: $animate-delay;
+  }
+  &::before {
+  }
+}
+
+.page-leave-to {
+  &::after {
+    transform: translateY(0%);
+    height: 100%;
+  }
+}
+
+.page-enter {
+  &::after {
+    transform: translateY(0%);
+    height: 100%;
+  }
+  &::before {
+  }
+}
+
+.page-enter-active {
+  &::after {
+    transition-duration: $animate-duration;
+    transition-delay: $animate-delay;
+  }
+  &::before {
+  }
+}
+
+.page-enter-to {
+  &::after {
+    transform: translateY(100%);
+    height: 100%;
+  }
+  &::before {
+  }
+}*/
+
+.page-enter-active,
+.page-leave-active {
+  transition-duration: $animate-duration;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: block;
+    width: 100%;
+    height: 140%;
+    height: 140vh;
+    transition-property: opacity, transform;
+    transition-timing-function: ease-out;
+    background-color: $white;
+    transform: translateY(-100%);
+  }
+}
+
+.page-leave {
+  &::after {
+    transform: translateY(-100%);
+  }
+}
+
+.page-leave-active {
+  &::after {
+    transition-duration: $animate-duration;
+    transition-delay: $animate-delay;
+  }
+}
+
+.page-leave-to {
+  &::after {
+    transform: translateY(0%);
+  }
+}
+
+.page-enter {
+  &::after {
+    transform: translateY(0%); 
+  }
+}
+
+.page-enter-active {
+  &::after {
+    transition-duration: $animate-duration;
+    transition-delay: $animate-delay;
+  }
+}
+
+.page-enter-to {
+  &::after {
+    transform: translateY(100%);
+  }
+}
+/*** animate light page ***/
+.page-light-enter-active,
+.page-light-leave-active {
+  transition-duration: $animate-duration;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: block;
+    width: 100%;
+    height: 140%;
+    height: 140vh;
+    transition-property: opacity, transform;
+    transition-timing-function: ease-out;
+    background-color: $dark;
+    transform: translateY(-100%);
+  }
+}
+
+.page-light-leave {
+  &::after {
+    transform: translateY(-100%);
+  }
+}
+
+.page-light-leave-active {
+  &::after {
+    transition-duration: $animate-duration;
+    transition-delay: $animate-delay;
+  }
+}
+
+.page-light-leave-to {
+  &::after {
+    transform: translateY(0%);
+    height: 140%;
+    height: 140vh;
+  }
+}
+
+.page-light-enter {
+  &::after {
+    transform: translateY(0%);
+    height: 140%;
+    height: 140vh;
+  }
+}
+
+.page-light-enter-active {
+  &::after {
+    transition-duration: $animate-duration;
+    transition-delay: $animate-delay;
+  }
+}
+
+.page-light-enter-to {
+  &::after {
+    transform: translateY(100%);
+    height: 140%;
+    height: 140vh;
+  }
+}
+/*** animate page dark to dark ***/
+
+/*.dark-to-dark-enter-active,
+.dark-to-dark-leave-active {
+  transition-duration: $animate-duration;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition-property: opacity, transform;
+    transition-timing-function: ease-out;
+    background-color: $white;
+    transform: translateY(-100%);
+  }
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition-property: opacity, transform;
+    transition-timing-function: ease-in;
+    background-color: $dark;
+    opacity: 1;
+  }
+}
+
+.dark-to-dark-leave {
+  &::after {
+    transform: translateY(-100%);
+  }
+}
+
+.dark-to-dark-leave-active {
+  &::after {
+    transition-duration: $animate-duration;
+    transition-delay: $animate-delay;
+  }
+  &::before {
+  }
+}
+
+.dark-to-dark-leave-to {
+  &::after {
+    transform: translateY(0%);
+    height: 100%;
+  }
+}
+
+.dark-to-dark-enter {
+  &::after {
+    transform: translateY(0%);
+    height: 100%;
+  }
+  &::before {
+  }
+}
+
+.dark-to-dark-enter-active {
+  &::after {
+    transition-duration: $animate-duration;
+    transition-delay: $animate-delay;
+  }
+  &::before {
+  }
+}
+
+.dark-to-dark-enter-to {
+  &::after {
+    transform: translateY(100%);
+    height: 100%;
+  }
+  &::before {
+  }
+}*/
+
+/*** animate page dark to dark ***/
+
+/*.light-to-light-enter-active,
+.light-to-light-leave-active {
+  transition-duration: $animate-duration;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition-property: opacity, transform;
+    transition-timing-function: ease-out;
+    background-color: $dark;
+    transform: translateY(-100%);
+  }
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition-property: opacity, transform;
+    transition-timing-function: ease-in;
+    background-color: $light;
+    opacity: 1;
+  }
+}
+
+.light-to-light-leave {
+  &::after {
+    transform: translateY(-100%);
+  }
+}
+
+.light-to-light-leave-active {
+  &::after {
+    transition-duration: $animate-duration;
+    transition-delay: $animate-delay;
+  }
+  &::before {
+  }
+}
+
+.light-to-light-leave-to {
+  &::after {
+    transform: translateY(0%);
+    height: 100%;
+  }
+}
+
+.light-to-light-enter {
+  &::after {
+    transform: translateY(0%);
+    height: 100%;
+  }
+  &::before {
+  }
+}
+
+.light-to-light-enter-active {
+  &::after {
+    transition-duration: $animate-duration;
+    transition-delay: $animate-delay;
+  }
+  &::before {
+  }
+}
+
+.light-to-light-enter-to {
+  &::after {
+    transform: translateY(100%);
+    height: 100%;
+  }
+  &::before {
+  }
+}*/
+
+/*** animate preloader ***/
+
+.fade-up-enter {
+}
+.fade-up-enter-active,
+.fade-up-leave-active {
+  transition: transform 3s, opacity 0.4s;
+}
+.fade-up-leave-to {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+/*** animate search ***/
+
+.search-large-enter,
+.search-large-leave-to {
+}
+.search-large-enter-active {
+  animation: search-large-in $animate-duration ease-out;
+}
+.search-large-leave-active {
+  animation: search-large-out $animate-duration ease-out forwards;
+}
+.search-large-move {
+  transition: transform $animate-duration ease-out;
+}
+
+@keyframes search-large-in {
+  0% {
+    transform: translateY(30px);
+    height: 0px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    height: 194px;
+  }
+}
+
+@keyframes search-large-out {
+  0% {
+    transform: translateY(0);
+    height: 194px;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(30px);
+    height: 0px;
+    opacity: 0;
+  }
+}
+
+/*** animate uiCalendar ***/
+
+.fade-enter {
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.4s;
+}
+.fade-leave-to {
+  opacity: 0;
+}
+
+/*** ***/
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active до версии 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+/*** animate loading dots ***/
+.animate-dot-first {
+  animation: animate-dot 500ms linear 0ms infinite alternate both;
+}
+
+.animate-dot-second {
+  animation: animate-dot 500ms linear 300ms infinite alternate both;
+}
+
+.animate-dot-third {
+  animation: animate-dot 500ms linear 500ms infinite alternate both;
+}
+
+@keyframes animate-dot {
+  0% {
+    background-color: #c6cccf;
+  }
+  50% {
+    background-color: #969fa3;
+  }
+  100% {
+    background-color: #6f7b82;
+  }
+}
+
+/*** animation ***/
+
+@media (--s) {
+  .animated {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+  }
+
+  .fadeIn {
+    animation-name: fadeIn;
+  }
+
+  .slideInUpXs {
+    animation-name: slideInUpXs;
+  }
+
+  .slideInDownXs {
+    animation-name: slideInDownXs;
+  }
+
+  .slideInDownSm {
+    animation-name: slideInDownSm;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInUpXs {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInDownXs {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInDownSm {
+    0% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+/*** animate arrows in button ***/
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+
+
+/* animate text from button */
+
+.m-movementInf {
+  padding-left: 0;
+  padding-right: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  width: 100%;
+  transition: 0s;
+
+  &:hover {
+    .movementInf {
+      opacity: 1;
+    }
+    .movementInfText {
+      opacity: 0;
+    }
+  }
+}
+.movementInf {
+  display: inline;
+  transition: 0s;
+  padding: 0;
+  position: absolute;
+  right: -100%;
+  top: 50%;
+  transform: translate(0, -50%);
+  line-height:1;
+  pointer-events: none;
+  opacity: 0;
+  animation: animMarqueeInf 2.5s linear infinite;
+}
+.movementInfText {
+  padding: 0 10px;
+  opacity: 1;
+  transition: 0s;
+  pointer-events: none;
+}
+
+@keyframes animMarqueeInf {
+  0% {
+    right: 0%;
+    transform: translate(100%, -50%);
+    opacity: 1;
+  }
+  99.8% {
+    right: 100%;
+    opacity: 1;
+  }
+  99.9% {
+    right: 100%;
+    opacity: 0;
+  }
+  100% {
+    right: 100%;
+    opacity: 1;
+  }
+}

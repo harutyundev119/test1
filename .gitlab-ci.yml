@@ -1,0 +1,119 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  IMAGE_TAG: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME
+  REGISTRY_SECRET: $CI_PROJECT_PATH_SLUG-$CI_COMMIT_REF_SLUG-registry
+  RELEASE_NAME: $CI_PROJECT_PATH_SLUG-$CI_COMMIT_REF_SLUG
+
+
+Build:
+  stage: build
+  only:
+    - dev
+    - master
+  except:
+    - schedules
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker build
+      --build-arg NODE_ENV='dev'
+      --build-arg API_URL=$API_URL_DEV
+      -t $IMAGE_TAG -f .docker/Dockerfile .
+    - docker push $IMAGE_TAG
+
+Build Production:
+  stage: build
+  only:
+    refs:
+      - tags
+  except:
+    - schedules
+    - brancher
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker build
+      --build-arg NODE_ENV='production'
+      --build-arg API_URL=$API_URL_PROD
+      -t $IMAGE_TAG -f .docker/Dockerfile .
+    - docker push $IMAGE_TAG
+
+Deploy:
+  stage: deploy
+  image: git.kodix.ru/kodix/build/helm:3
+  only:
+    - dev
+    - master
+  except:
+    refs:
+      - tags
+  environment:
+    name: $CI_COMMIT_REF_NAME
+    url: http://$CI_COMMIT_REF_SLUG-$CI_PROJECT_PATH_SLUG.$KUBE_NAMESPACE.$KUBE_INGRESS_BASE_DOMAIN
+    on_stop: stop
+  script:
+    - kubectl delete secret --ignore-not-found -n $KUBE_NAMESPACE $REGISTRY_SECRET
+    - kubectl create secret -n $KUBE_NAMESPACE
+      docker-registry $REGISTRY_SECRET
+      --docker-server="$CI_REGISTRY"
+      --docker-username=$REGISTRY_USER
+      --docker-password=$REGISTRY_TOKEN
+    - helm upgrade
+      --install
+      --set git.env=$CI_COMMIT_REF_SLUG
+      --set git.app=$CI_PROJECT_PATH_SLUG
+      --set registry.image="$IMAGE_TAG"
+      --set registry.secret=$REGISTRY_SECRET
+      --set service.internalPort="80"
+      --set git.commit=$CI_COMMIT_SHA
+      -n=$KUBE_NAMESPACE
+      --set ingress.domain=$(echo $CI_ENVIRONMENT_URL | cut -d / -f3)
+      --set release_mode="stage"
+      --set lecar.backend="lada-lecar-api-dev"
+      --wait
+      $RELEASE_NAME
+      ./.helm
+
+Deploy Production:
+  stage: deploy
+  image: alpine:3.9
+  except:
+    refs:
+      - branches
+  only:
+    refs:
+      - tags
+  environment:
+    name: production
+    url: http://le.car
+  variables:
+    SERVICE_NAME: frontend
+  before_script:
+    - chmod 0400 $SSH_RSA
+    - apk add openssh-client
+  script:
+    - ssh $SSH_COMMAND -i $SSH_RSA docker pull $IMAGE_TAG
+    - export RESULT=$(ssh $SSH_COMMAND -i $SSH_RSA docker service ls --format "{{.Name}}" | grep $SERVICE_NAME || echo 'no')
+    - if [[ $RESULT == 'no' ]];
+      then ssh $SSH_COMMAND -i $SSH_RSA docker service create --hostname $SERVICE_NAME --name $SERVICE_NAME --network lada $IMAGE_TAG;
+      else ssh $SSH_COMMAND -i $SSH_RSA docker service update --force --image $IMAGE_TAG $SERVICE_NAME;
+      fi
+
+stop:
+  stage: deploy
+  image: git.kodix.ru/kodix/build/helm:3
+  only:
+    refs:
+      - branches
+  except:
+    refs:
+      - tags
+  environment:
+    name: $CI_COMMIT_REF_NAME
+    action: stop
+  variables:
+    GIT_STRATEGY: none
+  script:
+    - helm un -n $KUBE_NAMESPACE $RELEASE_NAME
+  when: manual
